@@ -1,0 +1,28 @@
+.navbar-bg{
+    background-color: plum;
+}
+
+.color-letra-menu{
+    color: rgb(0, 0, 0);
+}
+
+.color-letra{
+    color: rgb(0, 0, 0);
+}
+
+.btn-amar{
+    background-color: #f1c40f;
+    border-radius: 3em;
+} 
+
+.fs-16{
+    font-size: 16pt;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.btn-amar:hover{
+    color: white;
+}
