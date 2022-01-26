@@ -1,35 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-bg bg-color">
+<nav  class="navbar navbar-expand-lg navbar-bg bg-color">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">Easy Job Diversitech  <i class="fa fa-laptop text-white fs-16" aria-hidden="true"></i></a>
+        <a class="navbar-brand text-white" routerLink="/home">Easy Job Diversitech  <i class="fa fa-laptop text-white fs-16" aria-hidden="true"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarNav">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link active color-letra-menu" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-letra-menu" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
+                    <a class="nav-link active color-letra-menu" aria-current="page" >Home</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link color-letra-menu" routerLink="#quemsomos">Sobre</a>
+                </li> -->
+                <!-- <li class="nav-item">
                     <a class="nav-link color-letra-menu" href="#">Contato</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <ul class="navbar-nav mr-auto d-flex align-items-center">
-            <li class="nav-item">
-                <button class="btn btn-amar" type="button">Login e Cadastro</button>  
+            <li *ngIf="naoLogado()"  class="nav-item">
+                <button  class="btn btn-amar" type="button" routerLink="/login">Login e Cadastro</button>  
                     <!-- <a class="nav-link color-letra" href="">Login e
                         Cadastro</a></button> -->
             </li>
-            <li class="nav-item me-2">
-                <p class="m-0 font-weight bold text-white">Olá, nome do usuário</p>
+            <li *ngIf="auth.logado()" class="nav-item me-2">
+                <p class="m-0 font-weight bold text-white">Olá, {{nome}}</p>
             </li>
-            <li class="nav-item">
-                <button class="btn btn-amar" type="button">Sair</button> 
+            <ng-container>
+            <li *ngIf="router.url !== '/home'" class="nav-item">
+                <button (click)="sair()"  class="btn btn-amar" type="button">Sair</button> 
             </li>
+        </ng-container>
         </ul>
     </div>
 </nav>

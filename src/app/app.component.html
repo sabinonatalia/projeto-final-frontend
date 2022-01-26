@@ -1,2 +1,5 @@
-<app-menu></app-menu>
-<app-rodape></app-rodape>
+<app-menu *ngIf="router.url !== '/login' && router.url !== '/cadastrar'" ></app-menu>
+
+<router-outlet></router-outlet>
+
+<app-rodape *ngIf="router.url !== '/login' && router.url !== '/cadastrar'"></app-rodape>

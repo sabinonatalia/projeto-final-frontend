@@ -1,0 +1,193 @@
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4"
+                src="https://media.discordapp.net/attachments/814843784529313795/935700272498491412/ON.png" alt="imagem do logo"
+                width="152" height="120">
+            <h2>Ficha Profissional</h2>
+            <p class="lead">Adicione os seus dados no formulário abaixo</p>
+            <!-- <p><a routerLink="lista">Ver lista de cadastro</a></p> -->
+            <!-- <button class="btn btn-primary btn-lg" routerLink="/lista-cadastro">Ver lista de cadastro</button> -->
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-7 col-lg-8">
+                <br>
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="nomeCompleto" class="form-label">Nome completo</label>
+                            <input [(ngModel)]="cadastro.nomeCompleto" type="text" class="form-control"
+                                name="nomeCompleto" id="nomeCompleto" placeholder="" value="" required>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="areaProf" class="form-label">Área de interesse</label>
+                            <input [(ngModel)]="cadastro.areaProf" name="areaProf" type="text" class="form-control"
+                                id="areaProf" placeholder="" value="" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">E-mail</label>
+                            <div class="input-group has-validation">
+                                <!-- <span class="input-group-text">@</span> -->
+                                <input [(ngModel)]="cadastro.email" name="email" type="text" class="form-control"
+                                    id="email" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input [(ngModel)]="cadastro.telefone" name="telefone" type="text" class="form-control"
+                                id="telefone" placeholder="">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input [(ngModel)]="cadastro.celular" name="celular" type="text" class="form-control"
+                                id="celular" placeholder="">
+                        </div>
+
+                        <h6>Endereço:</h6>
+                        <div class="col-4">
+                            <label for="address" class="form-label">Rua</label>
+                            <input [(ngModel)]="cadastro.rua" name="rua" type="text" class="form-control"
+                                id="endereco" placeholder="">
+                        </div>
+
+                        <div class="col-3">
+                            <label for="address" class="form-label">Número</label>
+                            <input [(ngModel)]="cadastro.num" name="numero" type="text"
+                                class="form-control" id="endereco" placeholder="">
+                        </div>
+
+                        <div class="col-5">
+                            <label for="address" class="form-label">Bairro</label>
+                            <input [(ngModel)]="cadastro.bairro" name="bairro" type="text"
+                                class="form-control" id="endereco" placeholder="" >
+                        </div>
+
+                        <div class="col-6">
+                            <label for="address2" class="form-label">Cidade</label>
+                            <input [(ngModel)]="cadastro.cidade" name="cidade" type="text"
+                                class="form-control" id="address2" placeholder="">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="address2" class="form-label">Estado</label>
+                            <input [(ngModel)]="cadastro.estado" name="estado" type="text"
+                                class="form-control" id="unidadeFederativa" placeholder="">
+                            <!-- <select [(ngModel)]="cadastro.unidadeFederativa" name="unidadeFederativa"
+                                class="form-select" id="state" required>
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+
+                            </select> -->
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                            <input [(ngModel)]="cadastro.dataNascimento" type="date" class="form-control"
+                                id="dataNascimento" placeholder="">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="genero" class="form-label">Gênero</label>
+                            <!-- <select [(ngModel)]="cadastro.genero" name="genero" class="form-select" id="genero">
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                            </select> -->
+                            <input [(ngModel)]="cadastro.genero" name="genero" type="text" class="form-control" id="genero"
+                            placeholder="">
+                        </div>
+
+                        <div class="col-md-5">
+                            <label for="racial" class="form-label">Perfil Diversidade</label>
+                            <!-- <select [(ngModel)]="cadastro.racial" name="racial" class="form-select" id="state">
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                            </select> -->
+                            <input [(ngModel)]="cadastro.perfilDiversidade" name="perfilDiversidade" type="text" class="form-control" id="racial"
+                            placeholder="">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="foto" class="form-label">Link da foto</label>
+                            <input [(ngModel)]="cadastro.foto" name="foto" type="text" class="form-control" id="foto"
+                                placeholder="">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="biografia" class="form-label">Biografia</label>
+                        <textarea [(ngModel)]="cadastro.biografia" name="biografia" class="form-control " id="biografia"
+                            placeholder=""></textarea>
+                    </div>
+                    <br>
+                    <hr class="my-4">
+                    <div class="d-flex justify-content-center">
+                        <button class=" btn btn-amar btn-lg text-center" type="submit" (click)="cadastrar()">Cadastrar</button>
+                    </div>
+                </form>
+                <br>
+                <br>                
+            </div>
+        </div>
+        <br><br>
+
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <h4 class="mt-5 mb-5 text-center">Cadastros Easy job Diversitech</h4>
+                <div *ngFor= "let item of listaCadastro"  class="card mb-3 me-2" style="width: 21em;">
+                    <img src="{{item.foto}}"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nomeCompleto}}</h5>
+                        <p class="card-text">{{item.biografia}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Email: {{item.email}}</li>
+                        <li class="list-group-item">Telefone {{item.telefone}}</li>
+                        <li class="list-group-item">Celular: {{item.celular}}</li>
+                        <!-- <p class="">Endereço</p> -->
+                        <li class="list-group-item">Rua: {{item.rua}} </li>
+                        <li class="list-group-item">Número: {{item.num}}</li>
+                        <li class="list-group-item">Bairro: {{item.bairro}}</li>
+                        <li class="list-group-item">Cidade: {{item.cidade}}</li>
+                        <li class="list-group-item">Estado: {{item.estado}}</li>
+                        <li class="list-group-item">Data de Nascimento: {{item.dataNascimento}}</li>
+                        <li class="list-group-item">Gênero: {{item.genero}}</li>
+                        <li class="list-group-item">Perfil Étnico: {{item.perfilDiversidade}}</li>
+                    </ul>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br><br>
+    </main>

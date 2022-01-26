@@ -1,0 +1,32 @@
+<a routerLink="/usuario"><i class="fa fa-arrow-left" aria-hidden="true"> Voltar</i></a>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h4 class="mt-5 mb-5 text-center">Cadastros Easy job Diversitech</h4>
+        <div *ngFor= "let item of listaCadastro"  class="card mb-3" style="width: 21em;">
+            <img src="{{item.foto}}"  class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.nomeCompleto}}</h5>
+                <p class="card-text">{{item.biografia}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{item.email}}</li>
+                <li class="list-group-item">E-mail</li>
+                <li class="list-group-item">Telefone</li>
+                <li class="list-group-item">Celular</li>
+                <li class="list-group-item">Rua</li>
+                <li class="list-group-item">Número</li>
+                <li class="list-group-item">Bairro</li>
+                <li class="list-group-item">Cidade</li>
+                <li class="list-group-item">Estado</li>
+                <li class="list-group-item">Data de Nascimento</li>
+                <li class="list-group-item">Gênero</li>
+                <li class="list-group-item">Perfil Étnico</li>
+            </ul>
+            <!-- <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div> -->
+        </div>
+        <br>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+#img-bg{
+    background-image: url('https://media.discordapp.net/attachments/814843784529313795/935300062895042600/capa.png');
+    min-height: 720px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-azul{
+    background-color: #5a91cf;
+    border-radius: 3em;
+    background-size: 100px;
+}
+
+
+.btn-azul:hover{
+    background-color: #C13584;
+    color: white;
+}   
+
+input{
+    border-radius: 3em;
+}
+
+input:hover{
+    background-color: rgb(146, 103, 187);
+    color: white;
+}
+

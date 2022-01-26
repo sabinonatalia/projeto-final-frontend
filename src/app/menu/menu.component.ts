@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +10,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  nome = environment.nome
 
-  ngOnInit(): void {
+  constructor(
+    public router: Router,
+    public auth: AuthService
+  ) { }
+
+  ngOnInit() {
   }
 
+  sair(){
+    this.router.navigate(['/home'])
+    environment.token = ''
+    environment.nome = ''
+    environment.id = 0
+  }
+
+  logado(){
+    let ok: boolean = false
+
+    if(environment.token != ''){
+      ok = true
+    }
+    return ok
+  }
+
+  naoLogado(){
+    let ok: boolean = false
+    if(environment.token == ''){
+      ok = true
+    }
+    return ok
+  }
 }
