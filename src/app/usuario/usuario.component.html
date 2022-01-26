@@ -6,8 +6,6 @@
                 width="152" height="120">
             <h2>Ficha Profissional</h2>
             <p class="lead">Adicione os seus dados no formulário abaixo</p>
-            <!-- <p><a routerLink="lista">Ver lista de cadastro</a></p> -->
-            <!-- <button class="btn btn-primary btn-lg" routerLink="/lista-cadastro">Ver lista de cadastro</button> -->
         </div>
 
         <div class="row d-flex justify-content-center">
@@ -30,7 +28,6 @@
                         <div class="col-12">
                             <label for="email" class="form-label">E-mail</label>
                             <div class="input-group has-validation">
-                                <!-- <span class="input-group-text">@</span> -->
                                 <input [(ngModel)]="cadastro.email" name="email" type="text" class="form-control"
                                     id="email" placeholder="">
                             </div>
@@ -77,62 +74,22 @@
                             <label for="address2" class="form-label">Estado</label>
                             <input [(ngModel)]="cadastro.estado" name="estado" type="text"
                                 class="form-control" id="unidadeFederativa" placeholder="">
-                            <!-- <select [(ngModel)]="cadastro.unidadeFederativa" name="unidadeFederativa"
-                                class="form-select" id="state" required>
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-
-                            </select> -->
                         </div>
 
                         <div class="col-md-3">
                             <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                            <input [(ngModel)]="cadastro.dataNascimento" type="date" class="form-control"
+                            <input [(ngModel)]="cadastro.dataNascimento" type="text" class="form-control"
                                 id="dataNascimento" placeholder="">
                         </div>
 
                         <div class="col-md-4">
                             <label for="genero" class="form-label">Gênero</label>
-                            <!-- <select [(ngModel)]="cadastro.genero" name="genero" class="form-select" id="genero">
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select> -->
                             <input [(ngModel)]="cadastro.genero" name="genero" type="text" class="form-control" id="genero"
                             placeholder="">
                         </div>
 
                         <div class="col-md-5">
                             <label for="racial" class="form-label">Perfil Diversidade</label>
-                            <!-- <select [(ngModel)]="cadastro.racial" name="racial" class="form-select" id="state">
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select> -->
                             <input [(ngModel)]="cadastro.perfilDiversidade" name="perfilDiversidade" type="text" class="form-control" id="racial"
                             placeholder="">
                         </div>
@@ -175,7 +132,6 @@
                         <li class="list-group-item">Email: {{item.email}}</li>
                         <li class="list-group-item">Telefone {{item.telefone}}</li>
                         <li class="list-group-item">Celular: {{item.celular}}</li>
-                        <!-- <p class="">Endereço</p> -->
                         <li class="list-group-item">Rua: {{item.rua}} </li>
                         <li class="list-group-item">Número: {{item.num}}</li>
                         <li class="list-group-item">Bairro: {{item.bairro}}</li>

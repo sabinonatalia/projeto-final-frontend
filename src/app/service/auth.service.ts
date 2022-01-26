@@ -15,11 +15,11 @@ export class AuthService {
   ) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/easyjob/logar', userLogin)
+    return this.http.post<UserLogin>('http://localhost:8080/easyjob-diversitech/logar', userLogin)
   }
 
   cadastrar(user: User): Observable<User>{
-    return this.http.post<User>('http://localhost:8080/easyjob/cadastrar', user)
+    return this.http.post<User>('http://localhost:8080/easyjob-diversitech/cadastrar', user)
   }
 
   logado(){

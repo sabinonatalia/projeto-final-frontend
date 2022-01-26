@@ -10,7 +10,6 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { ListaCadastrosComponent } from './lista-cadastros/lista-cadastros.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,8 +20,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CadastroComponent,
     HomeComponent,
-    UsuarioComponent,
-    ListaCadastrosComponent
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
